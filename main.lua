@@ -13,6 +13,44 @@ game.act = 'Не получается.';
 game.inv = 'Гм.. Странная штука..';
 game.use = 'Не сработает...';
 
+global {
+	charstats = {
+		alice = {
+			name = "Алиса",
+			strength = 100,
+			health = 100,
+			class = "female",
+			known = false,
+			firsttime = true,
+			firsttext = [[Ее худоба, ее взъерошенные волосы, темные, почти черные глаза, в этом адском освещении
+			создавали ощущение, что передо мной не девушка, изможденная, но за невзгодами не утратившая еще
+			своей природной красоты, а существо с другой планеты, или чудовище, сошедшее со страниц каких-нибудь
+			страшных сказок]],
+			where = 'dorm1_ent_chairs',
+		},
+		harry = {
+			name = "Гарри",
+			strength = 100,
+			health = 100,
+			class = "male",
+			known = false,
+			firsttime = true,
+			firsttext = "",
+			where = 'dorm1_ent_chairs',
+		},
+		greg = {
+			name = "Грег",
+			strength = 100,
+			health = 100,
+			class = "male",
+			known = false,
+			firsttime = true,
+			firsttext = "",
+			where = 'dorm1_ent_chairs',
+		},
+	}
+}
+
 main = room {
         forcedsc = true,
         nam = "Школа",
@@ -95,7 +133,7 @@ noroom = room {
 		'floor_index',
 	},
 }
-dorm1_floor = noroom
+dofile("dorm1.lua")
 dorm2_floor = noroom
 dorm3_floor = noroom
 dorm4_floor = noroom
