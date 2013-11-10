@@ -112,6 +112,8 @@ alice1 = obj {
 	},
 }
 
+alice1 = npc("alice", {})
+
 dorm1_ent_chairs = room {
 --[[
 	entered = function(s)
@@ -131,5 +133,5 @@ dorm1_ent_chairs = room {
 		'dorm1_enterance',
 	},
 }
-place(alice1, alice1.data.where)
+place(alice1, alice1._data.where)
 
